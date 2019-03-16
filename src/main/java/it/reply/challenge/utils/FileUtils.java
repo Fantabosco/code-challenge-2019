@@ -69,7 +69,9 @@ public class FileUtils {
 			e.printStackTrace();
 		} finally {
 			try {
-				bufferedWriter.close();
+				if(bufferedWriter != null) {
+					bufferedWriter.close();
+				}
 				fileWriter.close();
 			} catch (Exception e) {
 				e.printStackTrace();
